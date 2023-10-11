@@ -167,11 +167,10 @@ controlled by a company it is auditing or affiliated with a firm that sells vuln
 
 ## Security Review Scope
 
-The following sections describe areas that should be in scope for any security audit performed under this framework.
+The following sections describe at a high level the areas that should be in scope for any security audit performed under this framework.
 They are intended as starting points for DVs and SRPs when undertaking a device or firmware security assessment. Under
-the framework, it is required for every production version of device firmware to have undergone the assessment. Further
-examples incorporating all the sections in a scoping document can be found in the [example scopes](#appendix-a-example-review-scopes) in Appendix A. Note
-that these areas are not exhaustive or complete.
+the framework, it is required for every production version of device firmware to have undergone the assessment. A more detailed
+description of the scopes is provided in the [review areas](./review_areas.md) document.
 
 * **Threat Model** \
   The SRP should assess the DV’s documented threat models and perform a gap analysis, ensuring they are adequately
@@ -180,17 +179,17 @@ that these areas are not exhaustive or complete.
   be aligned with the in-scope and out-of-scope threats described by
   the [Common Security Threats](https://docs.google.com/document/d/13I-meE6BxiLB_c-Mjr3cLLK9S0SjuPuRjPfS9yTG6P8/edit#heading=h.ou65h8wmxru)
   document:
-    * <span style="text-decoration:underline;">Security Objectives</span>: The high-level security objectives or key
+    * **Security Objectives**: The high-level security objectives or key
       risks exposed by the firmware. Examples of such objectives may include the strict requirement that the secure boot
       or firmware anti-rollback features must not be subverted or bypassed by an attacker.
-    * <span style="text-decoration:underline;">Adversarial Model</span>: A listing of all threat actors along with their
+    * **Adversarial Model**: A listing of all threat actors along with their
       motivation and capabilities. Examples may include a simple opportunistic hardware adversary, or advanced
       persistent threats that are able to keep the device under antagonistic conditions for an extended duration.
-    * <span style="text-decoration:underline;">Attack Surface Enumeration</span>: A listing of all remote, local and
+    * **Attack Surface Enumeration**: A listing of all remote, local and
       physical attack surfaces exposed by the device. Examples may include mailbox or IPC interfaces exposed via MMIO, a
       command shell exposed via a serial interface, inter-chip buses which transmit sensitive data, or external
       non-volatile storage media.
-    * <span style="text-decoration:underline;">Critical Assets</span>: A listing of all security-impacting assets within
+    * **Critical Assets**: A listing of all security-impacting assets within
       the firmware, and the corresponding Confidentiality, Integrity and Availability requirements for each. Examples of
       critical assets may include secret keys, the fuse config, or configuration data residing in external flash.
 
@@ -263,7 +262,7 @@ mailing list.
   The SRP must produce a cryptographically signed machine-readable short-form report. This document will summarize the
   audit scope, and uniquely identify the vendor, device and firmware version by means of a firmware hash. This report
   will enumerate all vulnerabilities with a CVE score and a brief summary. The short-form report specification can be
-  found in [Appendix C](#appendix-c-machine-readable-short-form-report-format). To claim OCP SAFE endorsement for a product-firmware combination this report must
+  found in [Appendix B](#appendix-b-machine-readable-short-form-report-format). To claim OCP SAFE endorsement for a product-firmware combination this report must
 be published to the OCP GitHub repository.
 
 In addition to the short-form report, the SRP should deliver to the DV a detailed report. This report will likely be
@@ -288,7 +287,7 @@ use the findings in the report to improve design, engineering, build, and test p
         * Reproduction steps, if any.
     * Analysis and critique section for the relevant review areas, and of the threat model and scope
 
-Several SRP sample reports can be found in [Appendix B](#appendix-b-example-reports).
+Several SRP sample reports can be found in [Appendix A](#appendix-a-example-reports).
 
 * **Embargos** \
   If the SRP identifies vulnerabilities that might need a significant amount of time to fix or mitigate, the DV may opt
@@ -321,19 +320,16 @@ the [CAB Forum requirements](https://cabforum.org/audit-criteria/).
     * Automated regression testing of the software/firmware/(package) is used to confirm that previously fixed security
       vulnerabilities have not been reintroduced and confirmation of BugIDs is included in the manifest
 
-# Appendix A: Example Review Scopes
 
-* The [NVMe SSD Drives](https://docs.google.com/document/d/1XKHC0xgEq9J8T0uw7anNSdNorj9x0zaYslfTr7SBXAo/edit?resourcekey=0-VAcd4GG8NsWT-_OkdDcfYQ#)
-specification serves as an example of a security review scope targeted at a specific class of devices.
-
-# Appendix B: Example Reports
+# Appendix A: Example Reports
 
 * Atredis Partners - [Sample Deliverables](https://www.atredis.com/sample-deliverables)
 * NCC
   Group - [Zephyr RTOS Security Assessment](https://research.nccgroup.com/wp-content/uploads/2020/05/NCC_Group_Zephyr_MCUboot_Research_Report_2020-05-26_v1.0.pdf)
   and other [public reports](https://research.nccgroup.com/category/public-reports/)
+* NCC's first review of [Caliptra](https://chipsalliance.github.io/Caliptra/) can be found [here](https://github.com/chipsalliance/Caliptra/blob/main/doc/NCC_Group_Microsoft_MSFT283_Report_2023-10-04_v1.1.pdf) 
 
-# Appendix C: Machine Readable Short-Form Report Format
+# Appendix B: Machine Readable Short-Form Report Format
 
 A reference implementation of the library to produce and verify short form reports is available
 in [this repo](https://github.com/opencomputeproject/OCP-Security-SAFE).
