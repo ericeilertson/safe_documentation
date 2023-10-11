@@ -41,9 +41,7 @@ Conversion notes:
 <p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
-![alt_text](images/image1.png "image_tooltip")
-
-### DRAFT
+![alt_text](images/OCP-SAFE-logo-horz-color-3x-v1-2b.png "image_tooltip")
 
 ## SRP Requirements
 
@@ -123,11 +121,7 @@ It will likely be the case that a single SOC may require analysis from multiple 
 require additional scrutiny than the application cores.
 
 
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image2.png "image_tooltip")
+![alt_text](images/growing_scope.png "image_tooltip")
 
 There is a burden of proof on the SRP to demonstrate it meets the guidelines. The OCP will establish a panel for
 assessing applications to become an approved SRP, and this document gives the basis on which the assessment will be
@@ -135,11 +129,7 @@ made. The application should include a response to the business requirements and
 response to the technical requirements should be organized around the assessment scopes.
 
 ## Assessment Scope Overview
-
-<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-![alt_text](images/image3.png "image_tooltip")
+![alt_text](images/safe_focus_areas.png "image_tooltip")
 
 ### Scope 1 - Validating Code
 
