@@ -142,8 +142,7 @@ a belief that the SRP delivers work of variable quality this brings into questio
 Similarly, a conflict of interest degrades the value of the reports and in turns decreases the value of the SAFE
 program.
 
-The [SRP requirements document](https://docs.google.com/document/d/1t91TiyBNDG1cj7MdbOqFaPwzv3Pm5nE-aoXgIqwu-eg/edit?usp=sharing)
-contains requirements for the SRPs business, management, and technical requirements. These requirements will be
+The [SRP requirements document](./srp_requirements.md) contains requirements for the SRPs business, management, and technical requirements. These requirements will be
 evaluated in totality by the OCP SAFE Technical Advisory Committee.
 
 The sample reports carry the most weight when evaluating an SRP. The reports demonstrate their ability to identify
