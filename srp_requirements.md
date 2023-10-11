@@ -128,10 +128,12 @@ The SRP should be prepared to offer assessment capabilities in the following are
     13. Erasure
     14. Exploit mitigation
 5. Review of build environment
-    15. Review of toolchain integrity: Specified compiler, library versions
-    16. Review of toolchain output, use of protective technology
-        4. Debug strings, symbols
-        5. Stack canaries, protection
+   1. Review of toolchain integrity: 
+   * Specified compiler, library versions
+   2. Review of toolchain output
+   * Use of protective technology
+   * Debug strings, symbols
+   * Stack canaries, protection
 
 ### Scope 2 - Assessing architecture for isolation
 
@@ -263,7 +265,7 @@ questions.
 5. Is the ISP reviewed at planned intervals (no longer than one year), or if significant changes occur, to evaluate
    continuing suitability, adequacy and effectiveness?
 6. Has a method been established to enable individuals to confirm their acceptance of and compliance with the ISP?
-7. Is the ISP supported by a suite of risk specific information/cyber security policies, for example an Access Control
+7. Is the ISP supported by a suite of risk specific information/cybersecurity policies, for example an Access Control
    Policy, Acceptable Use Policy, Malware Policy etc?
 8. Does the organization have a named and defined role that is responsible for Information Security?
 9. Do you manage Information Security and Information Technology separately?
@@ -333,7 +335,7 @@ questions.
 7. Is there a documented procedure in place concerning the use of networks and network services relating to connections
    to sensitive and/or critical business applications?
 8. Do you store and monitor audit logs of access to systems containing Program Participant data?
-9. Do you operate a Onboarding Process which ensures that employees or subcontractors are only given access to systems
+9. Do you operate an Onboarding Process which ensures that employees or subcontractors are only given access to systems
    based on the requirements of their role and all are issued unique login credentials?
 10. Does your Onboarding process assign permissions to Joiners based on their role (rather than copying existing user
     permissions)?
@@ -431,7 +433,7 @@ questions.
    compromised or circumvented?
 5. Are devices and computer systems of low trust level such as remote access servers and wireless network access points
    located in dedicated network security zones?
-6. Are mission critical and highly sensitive assets located in dedicated security zones?
+6. Are mission-critical and highly sensitive assets located in dedicated security zones?
 7. Are network and security management systems located in dedicated security zones?
 8. Are systems in development and/or testing located in different zones than production systems?
 9. Where applicable, are there procedures in place for the protection of electronic Program Participant information
@@ -546,8 +548,8 @@ questions.
 
 The criteria and questions below will be evaluated in totality. A prospective SRP does not need to address everything
 listed below in granular detail. The OCP will assess each CSP application and the responses to each of the following
-requirements. The requirements should be viewed as desired but not essential. The more of the requirements a potential
-SRP can demonstrate, the stronger the case for for acceptance as an approved SRP.
+requirements. The requirements should be viewed as desired but not essential. The more requirements a potential
+SRP can demonstrate, the stronger the case for acceptance as an approved SRP.
 
 ### Scope 1 assessments
 

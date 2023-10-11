@@ -76,7 +76,7 @@ assurance.
 
 Ideally, none of the security- or privacy-critical components are designed in a way that requires a data center provider
 and their customers to place trust in a single entity. To work towards this goal, many data center providers have been
-engaging third-parties to conduct security audits of device supplier firmware. The objective of these audits is provide
+engaging third-parties to conduct security audits of device supplier firmware. The objective of these audits is to provide
 data center providers and end users with independent assurances about the component providers security posture.
 
 In this document, we describe the role of a trusted third-party (or multiple parties) to independently review the device
@@ -95,10 +95,10 @@ deliverables.
 
 Compared to other industry processes, (e.g., Common Criteria, FIPS, or PCI-DSS) that focus on compliance to exact
 criteria, the intention of this framework is to provide lightweight review areas to guide security audits. These audits
-will be almost exclusively performed by manual code inspection by subject matter experts (the SRP) and are expected to
+will be almost exclusively performed by manual code inspection by subject-matter-experts (the SRP) and are expected to
 provide not only details on specific vulnerability findings, but also analysis and critique of threat models, designs,
 and overall security posture of the device compared to industry standards (
-e.g,. [NIST 800-193](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-193.pdf), [Secure Hardware Design Guidelines](https://opentitan.org/book/doc/security/implementation_guidelines/hardware/), [TCG Guidance for Secure Update of Software and Firmware on Embedded Systems](https://trustedcomputinggroup.org/wp-content/uploads/TCG-Secure-Update-of-SW-and-FW-on-Devices-v1r72_pub.pdf), [OCP's Secure Firmware Development Best Practices](https://www.opencompute.org/documents/csis-firmware-security-best-practices-position-paper-version-1-0-pdf)).
+e.g. [NIST 800-193](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-193.pdf), [Secure Hardware Design Guidelines](https://opentitan.org/book/doc/security/implementation_guidelines/hardware/), [TCG Guidance for Secure Update of Software and Firmware on Embedded Systems](https://trustedcomputinggroup.org/wp-content/uploads/TCG-Secure-Update-of-SW-and-FW-on-Devices-v1r72_pub.pdf), [OCP's Secure Firmware Development Best Practices](https://www.opencompute.org/documents/csis-firmware-security-best-practices-position-paper-version-1-0-pdf)).
 
 The conditions under which these reviews take place, are of two main types:
 
@@ -138,7 +138,7 @@ The key objectives of this framework are:
 ## Security Review Provider Selection
 
 The reputation and integrity of the Security Review Providers are as important as their technical expertise. If there is
-a belief that the SRP delivers work of variable quality this brings into question all of the reports they produce.
+a belief that the SRP delivers work of variable quality this brings into question all the reports they produce.
 Similarly, a conflict of interest degrades the value of the reports and in turns decreases the value of the SAFE
 program.
 
@@ -154,7 +154,7 @@ Successful SRPs will demonstrate thought leadership in the security and vulnerab
 done through papers, presentations, blog posts, videos etc. In addition to educating the security industry, successful
 SRPs will have a history of publishing and maintaining the tools they use.
 
-A newly approved SRP will be given a one year probationary period to demonstrate their ability to produce quality
+A newly approved SRP will be given a one-year probationary period to demonstrate their ability to produce quality
 reports. If approved by the TAC, subsequent endorsements will be for 1-3 years. Continued endorsement is not automatic,
 an SRP must be nominated and approved by the TAC.
 
@@ -243,9 +243,8 @@ root of trust due to the need for glitch protection when using a long-term devic
 
 ## OCP Report Deliverables
 
-This framework stipulates that the following be delivered to the OCP Security WG for publication on
-it’s [Wiki](https://www.opencompute.org/wiki/Security) or in appropriate
-public [GitHub](https://github.com/opencomputeproject) repositories after the review (and re-testing, and any embargo
+This framework stipulates that the following be delivered to the OCP Security WG for publication in the appropriate
+public [GitHub](https://github.com/opencomputeproject/OCP-Security-SAFE) repositories after the review (and re-testing, and any embargo
 periods end) has concluded:
 
 * **Scope Document** \
@@ -255,7 +254,7 @@ the DV is encouraged to socialize the Scope with the OCP Security WG, either thr
 mailing list.
 
 * The scope itself can be any number of documents, as long as the concatenation of them is provided to the OCP Security
-  WG. Aside from level of effort estimates, no part of the DV/SRP statement of work, NDAs, etc needs to be published at
+  WG. Aside from level of effort estimates, no part of the DV/SRP statement of work, NDAs, etc. needs to be published at
   all
 
 * **Short-Form Report** \
@@ -276,7 +275,7 @@ use the findings in the report to improve design, engineering, build, and test p
         * Review scope
         * Effort (person-days)
         * Test methodology (e.g., source code access, onsite vs. remote testing)
-        * Limitations (e.g., blockers, areas of incomplete test coverage, etc)
+        * Limitations (e.g., blockers, areas of incomplete test coverage, etc.)
         * Strategic recommendations
     * Detailed descriptions of vulnerabilities or findings, if any. For each finding, the following information should
       be included:
@@ -294,32 +293,6 @@ Several SRP sample reports can be found in [Appendix A](#appendix-a-example-repo
   to embargo these findings until such a time (up to industry standard coordinated disclosure limits, typically 90 days)
   and elide them from the report, or even hold back the entire report until such a time as the issues have been
   resolved.
-
-## Infrastructure Review Areas
-
-In the next few years CSPs will require the build and signing infrastructure and process to be reviewed. Below are some
-areas that will need to be reviewed. The reviews will likely be similar to
-the [CAB Forum requirements](https://cabforum.org/audit-criteria/).
-
-* **Build and Signing Manifest** \
-  The SRP should review the process and infrastructure used by the DV to build and sign the firmware/software. Examples
-  of manifest objectives:
-    * How is it ensured that the intended code, parameters, and build environment was used to produce the signed
-      firmware
-    * The firmware signing keys must be stored in HSMs and require multiple people to unlock the private keys used for
-      signing
-    * Process for documenting who approved the signing of each version of firmware
-    * Ensure the process for building the final firmware image is reproducible
-    * What is the disaster recovery plan for the signing process? Is the failover process secure?
-* **Regression Manifest** \
-  A signed certificate describing sensitive functionality changes and deltas from the previous software/firmware build.
-  Examples of manifest objectives:
-    * Current and past versions of the source code are compared for removal, addition, or substantive modification of
-      sensitive functionality and flagged for CSP attention. Consultant-led security assessment and validation may be
-      required
-    * Automated regression testing of the software/firmware/(package) is used to confirm that previously fixed security
-      vulnerabilities have not been reintroduced and confirmation of BugIDs is included in the manifest
-
 
 # Appendix A: Example Reports
 
