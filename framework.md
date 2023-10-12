@@ -49,7 +49,7 @@ OCP Security Workgroup
    </td>
   </tr>
   <tr>
-   <td>0.9
+   <td>1.0
    </td>
    <td>Sept, 2023
    </td>

@@ -19,7 +19,7 @@ OCP Security Workgroup
    </td>
   </tr>
   <tr>
-   <td>0.1
+   <td>1.0
    </td>
    <td>Sep, 2023
    </td>
@@ -29,7 +29,7 @@ OCP Security Workgroup
    </td>
   </tr>
   <tr>
-   <td>0.2
+   <td>
    </td>
    <td>
    </td>
@@ -39,7 +39,7 @@ OCP Security Workgroup
    </td>
   </tr>
   <tr>
-   <td>0.3
+   <td>
    </td>
    <td>
    </td>
