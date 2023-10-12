@@ -11,18 +11,19 @@ often have gaps or deficiencies in the particular situation under review.
 1. Version identification
 2. Vulnerability management and publication
 3. Configuration management and protection
-4. Build repeatability and consistency
-5. Behavior and implementation align with design
-6. Tool chain security features
-7. HW security features
-8. Development standards
+4. Build system attestation process and metadata
+5. Build repeatability and consistency
+6. Behavior and implementation align with design
+7. Tool chain security features
+8. HW security features
+9. Development standards
 
 #### SDL
 
 1. Threat model
 2. Static analysis configuration and practices
 3. Fuzzing tools, configuration and coverage
-4. Management of third party dependencies
+4. Management of third party dependencies (including cryptographhically signed SBoM)
 5. Build configuration
 
 #### Security Implementation Details (HDL and LDL)
@@ -156,7 +157,7 @@ often have gaps or deficiencies in the particular situation under review.
 
 #### Trusted Execution Environment
 
-1. Generic TEE requirements, need to think about these
+1. DV implemented TEE's must generally conform to standards evovling in the Confidential Computing Consortium. Generally, TEE's must provide cryptographically segregated runtime environments where the cryptographic material is opaque to all processesses outside of the secure enclave.
 2. Trusted execution environment has physical and logical safeguards to provide isolation from other processing entities
 3. IO from the TEE follows industry standards such as IDE or TDISP. If a proprietary protocol is used, e.g. XGMI,
    NVLINK, it must provide similar authentication, integrity, and isolation guarantees.
@@ -185,7 +186,7 @@ often have gaps or deficiencies in the particular situation under review.
 1. Encrypted memory or storage uses industry standard crypto e.g., AES-XTS
 2. Encryption keys must be generated to appropriate length and entropy to comply with FIPS/CNSA standards
 3. Encryption keys must not be stored/cache in associated volatile or non-volatile storage
-4. Wrapped keys, typically used for storage or transport, must have a mechanism to detection modification or replay
+4. Wrapped keys, typically used for storage or transport, must have a mechanism to detect modification or replay
 5. Encryption mechanisms are resistant to side channel attacks
 
  

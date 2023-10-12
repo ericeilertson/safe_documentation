@@ -163,11 +163,11 @@ an SRP must be nominated and approved by the TAC.
 SRPs may have their endorsement suspended or revoked at any time for issues that cause SAFE to question the SRPs
 security practices, commitment to quality, or allegiances. Examples of such issues include losing control of a private
 signing key, endorsing firmware with hard coded credentials. Beyond egregious technical mistakes, an SRP must not be
-controlled by a company it is auditing or affiliated with a firm that sells vulnerabilities or exploits.
+controlled by a company it is auditing or affiliated with a firm that sells vulnerabilities or exploits (this must be backed with a formal certification signed by the SRP CEO/President attesting to this requirement). Any violations of the SRP "code of conduct" will result in immediate public notification of disqualificatio and trigger a TAC review of all previous contributions by the SRP.
 
 ## Security Review Scope
 
-The following sections describe at a high level the areas that should be in scope for any security audit performed under this framework.
+The following sections describe at a high level the areas that shall be in scope for any security audit performed under this framework.
 They are intended as starting points for DVs and SRPs when undertaking a device or firmware security assessment. Under
 the framework, it is required for every production version of device firmware to have undergone the assessment. A more detailed
 description of the scopes is provided in the [review areas](./review_areas.md) document.
@@ -175,7 +175,7 @@ description of the scopes is provided in the [review areas](./review_areas.md) d
 * **Threat Model** \
   The SRP should assess the DV’s documented threat models and perform a gap analysis, ensuring they are adequately
   covered by the observed hardware and firmware implementation. If the DV cannot provide a threat model, then the SRP
-  should create one as part of the assessment scope. The threat model document should include the following details, and
+  shall create one as part of the assessment scope. The threat model document should include the following details, and
   be aligned with the in-scope and out-of-scope threats described by
   the [Common Security Threats](https://docs.google.com/document/d/13I-meE6BxiLB_c-Mjr3cLLK9S0SjuPuRjPfS9yTG6P8/edit#heading=h.ou65h8wmxru)
   document:
@@ -231,6 +231,7 @@ root of trust due to the need for glitch protection when using a long-term devic
         * Unauthenticated APIs.
         * Safe generation and handling of all cryptographic material.
         * Encryption capability controls (disk encryption, erase, rotation).
+        * Cryptographic algorithm compliance with CNSA 2.0 standards
         * Secure boot key rotation capabilities.
 * **Scope 2 - Focusing on Trust boundaries**
     * Trusted execution environment assessment
@@ -245,7 +246,7 @@ root of trust due to the need for glitch protection when using a long-term devic
 
 This framework stipulates that the following be delivered to the OCP Security WG for publication in the appropriate
 public [GitHub](https://github.com/opencomputeproject/OCP-Security-SAFE) repositories after the review (and re-testing, and any embargo
-periods end) has concluded:
+periods end) has concluded.
 
 * **Scope Document** \
   DV and SRP should jointly negotiate the scope of the review, based on the
@@ -254,11 +255,10 @@ the DV is encouraged to socialize the Scope with the OCP Security WG, either thr
 mailing list.
 
 * The scope itself can be any number of documents, as long as the concatenation of them is provided to the OCP Security
-  WG. Aside from level of effort estimates, no part of the DV/SRP statement of work, NDAs, etc. needs to be published at
-  all
+  WG. Aside from level of effort estimates, no part of the DV/SRP statement of work, NDAs, etc. needs to be published.
 
 * **Short-Form Report** \
-  The SRP must produce a cryptographically signed machine-readable short-form report. This document will summarize the
+  The SRP must produce a cryptographically signed machine-readable short-form report. The cryptographic provenance of this report must be publicly verifiable, for example using the public Sigstore service. This document will summarize the
   audit scope, and uniquely identify the vendor, device and firmware version by means of a firmware hash. This report
   will enumerate all vulnerabilities with a CVE score and a brief summary. The short-form report specification can be
   found in [Appendix B](#appendix-b-machine-readable-short-form-report-format). To claim OCP SAFE endorsement for a product-firmware combination this report must
@@ -293,6 +293,8 @@ Several SRP sample reports can be found in [Appendix A](#appendix-a-example-repo
   to embargo these findings until such a time (up to industry standard coordinated disclosure limits, typically 90 days)
   and elide them from the report, or even hold back the entire report until such a time as the issues have been
   resolved.
+
+  In no case will embargo's be permitted to extend past a period 6 months.
 
 # Appendix A: Example Reports
 
