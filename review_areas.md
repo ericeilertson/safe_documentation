@@ -1,8 +1,9 @@
 # Assessment Scope
 
-This section gives areas expected to be assessed by an SRP. They are purposely written to be vague. OCP believes that
-quality, timely assessments are best achieved by letting SRPs focus on the architectural and implementation areas that
-often have gaps or deficiencies in the particular situation under review.
+This section provides guidance for the areas expected to be assessed by an SRP. The list is purposefully vague because
+the OCP Workgroup believes that high quality, timely assessments are best achieved by letting the SRPs focus on the
+architectural and implementation areas that are commonly known to have gaps or deficiencies in the scenario under
+review.
 
 ### Documentation
 
@@ -59,7 +60,7 @@ often have gaps or deficiencies in the particular situation under review.
 3. Services running on DUT
 4. All API's implemented on DUT
 
-###  
+###    
 
 ### Code Review
 
@@ -117,7 +118,8 @@ often have gaps or deficiencies in the particular situation under review.
 5. Unique or replaceable symmetric keys per device
 6. Assets at rest must be appropriately cryptographically protected
 7. Assets in memory must be appropriately protected/isolated
-8. Secure support for re-provisioning of all cryptographic material
+8. Keys and other critical security parameters are zeroed when no longer in use
+9. Secure support for re-provisioning of all cryptographic material
 
 #### Auditing & Telemetry
 
@@ -159,8 +161,7 @@ often have gaps or deficiencies in the particular situation under review.
 1. Generic TEE requirements, need to think about these
 2. Trusted execution environment has physical and logical safeguards to provide isolation from other processing entities
 3. IO from the TEE follows industry standards such as IDE or TDISP. If a proprietary protocol is used, e.g. XGMI,
-   NVLINK, it must provide similar authentication, integrity, and isolation guarantees.
-4.
+   NVLINK, it must provide similar authentication, integrity, and isolation guarantees
 
 #### Root of Trust
 

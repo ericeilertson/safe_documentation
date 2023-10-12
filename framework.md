@@ -65,6 +65,7 @@ OCP Security Workgroup
 * CSP - Cloud Service Provider
 * DV - Device Vendor
 * SRP - Security Review Provider
+* TAC - Technical Advisory Committee
 
 # Executive Summary         
 
@@ -76,7 +77,8 @@ assurance.
 
 Ideally, none of the security- or privacy-critical components are designed in a way that requires a data center provider
 and their customers to place trust in a single entity. To work towards this goal, many data center providers have been
-engaging third-parties to conduct security audits of device supplier firmware. The objective of these audits is to provide
+engaging third-parties to conduct security audits of device supplier firmware. The objective of these audits is to
+provide
 data center providers and end users with independent assurances about the component providers security posture.
 
 In this document, we describe the role of a trusted third-party (or multiple parties) to independently review the device
@@ -142,8 +144,9 @@ a belief that the SRP delivers work of variable quality this brings into questio
 Similarly, a conflict of interest degrades the value of the reports and in turns decreases the value of the SAFE
 program.
 
-The [SRP requirements document](./srp_requirements.md) contains requirements for the SRPs business, management, and technical requirements. These requirements will be
-evaluated in totality by the OCP SAFE Technical Advisory Committee.
+The [SRP requirements document](./srp_requirements.md) contains requirements for the SRPs business, management, and
+technical requirements. These requirements will be
+evaluated in totality by the OCP SAFE Technical Advisory Committee (TAC).
 
 The sample reports carry the most weight when evaluating an SRP. The reports demonstrate their ability to identify
 vulnerabilities and justify why a vulnerability likely does not exist. Documenting the lack of a vulnerability will
@@ -167,9 +170,11 @@ controlled by a company it is auditing or affiliated with a firm that sells vuln
 
 ## Security Review Scope
 
-The following sections describe at a high level the areas that should be in scope for any security audit performed under this framework.
+The following sections describe at a high level the areas that should be in scope for any security audit performed under
+this framework.
 They are intended as starting points for DVs and SRPs when undertaking a device or firmware security assessment. Under
-the framework, it is required for every production version of device firmware to have undergone the assessment. A more detailed
+the framework, it is required for every production version of device firmware to have undergone the assessment. A more
+detailed
 description of the scopes is provided in the [review areas](./review_areas.md) document.
 
 * **Threat Model** \
@@ -193,10 +198,10 @@ description of the scopes is provided in the [review areas](./review_areas.md) d
       the firmware, and the corresponding Confidentiality, Integrity and Availability requirements for each. Examples of
       critical assets may include secret keys, the fuse config, or configuration data residing in external flash.
 
-The SAFE program defines 3 security review scopes that increase the types of attacks in the threat model. It is expected
-that devices will have reviews done with different review scopes. For example, a CPU may have a scope 3 review of the
-root of trust due to the need for glitch protection when using a long-term device private key. This CPU may use a scope
-2 review for the application cores.
+The SAFE program defines 3 security review scopes. These scopes increase the complexity of attacks in the threat model.
+It is expected that devices will have reviews done with different review scopes. For example, a CPU may have a scope 3
+review of the root of trust due to the need for glitch protection when using a long-term device private key. This CPU
+may use a scope 2 review for the application cores.
 
 * **Scope 1 Code and Architecture Assessment**
     * **Source Code Review** \
@@ -243,15 +248,15 @@ root of trust due to the need for glitch protection when using a long-term devic
 
 ## OCP Report Deliverables
 
-This framework stipulates that the following be delivered to the OCP Security WG for publication in the appropriate
-public [GitHub](https://github.com/opencomputeproject/OCP-Security-SAFE) repositories after the review (and re-testing, and any embargo
-periods end) has concluded:
+This framework stipulates that the following be delivered to the OCP SAFE program for publication in the appropriate
+public [GitHub](https://github.com/opencomputeproject/OCP-Security-SAFE) repositories after the review (and re-testing,
+and any embargo periods end) has concluded:
 
 * **Scope Document** \
   DV and SRP should jointly negotiate the scope of the review, based on the
-[review areas](#security-review-scope). As alluded to above, the areas are neither exhaustive nor complete, therefore
-the DV is encouraged to socialize the Scope with the OCP Security WG, either through its regular calls, or on its
-mailing list.
+  [review areas](#security-review-scope). As alluded to above, the areas are neither exhaustive nor complete, therefore
+  the DV is encouraged to socialize the Scope with the OCP Security WG, either through its regular calls, or on its
+  mailing list.
 
 * The scope itself can be any number of documents, as long as the concatenation of them is provided to the OCP Security
   WG. Aside from level of effort estimates, no part of the DV/SRP statement of work, NDAs, etc. needs to be published at
@@ -261,8 +266,9 @@ mailing list.
   The SRP must produce a cryptographically signed machine-readable short-form report. This document will summarize the
   audit scope, and uniquely identify the vendor, device and firmware version by means of a firmware hash. This report
   will enumerate all vulnerabilities with a CVE score and a brief summary. The short-form report specification can be
-  found in [Appendix B](#appendix-b-machine-readable-short-form-report-format). To claim OCP SAFE endorsement for a product-firmware combination this report must
-be published to the OCP GitHub repository.
+  found in [Appendix B](#appendix-b-machine-readable-short-form-report-format). To claim OCP SAFE endorsement for a
+  product-firmware combination this report must
+  be published to the OCP GitHub repository.
 
 In addition to the short-form report, the SRP should deliver to the DV a detailed report. This report will likely be
 protected by NDA and will not be published. The DV should address the findings in the report. The DV is encouraged to
@@ -291,7 +297,7 @@ Several SRP sample reports can be found in [Appendix A](#appendix-a-example-repo
 * **Embargos** \
   If the SRP identifies vulnerabilities that might need a significant amount of time to fix or mitigate, the DV may opt
   to embargo these findings until such a time (up to industry standard coordinated disclosure limits, typically 90 days)
-  and elide them from the report, or even hold back the entire report until such a time as the issues have been
+  and omit them from the report, or even hold back the entire report until such a time as the issues have been
   resolved.
 
 # Appendix A: Example Reports
@@ -300,7 +306,8 @@ Several SRP sample reports can be found in [Appendix A](#appendix-a-example-repo
 * NCC
   Group - [Zephyr RTOS Security Assessment](https://research.nccgroup.com/wp-content/uploads/2020/05/NCC_Group_Zephyr_MCUboot_Research_Report_2020-05-26_v1.0.pdf)
   and other [public reports](https://research.nccgroup.com/category/public-reports/)
-* NCC's first review of [Caliptra](https://chipsalliance.github.io/Caliptra/) can be found [here](https://github.com/chipsalliance/Caliptra/blob/main/doc/NCC_Group_Microsoft_MSFT283_Report_2023-10-04_v1.1.pdf) 
+* NCC's first review of [Caliptra](https://chipsalliance.github.io/Caliptra/) can be
+  found [here](https://github.com/chipsalliance/Caliptra/blob/main/doc/NCC_Group_Microsoft_MSFT283_Report_2023-10-04_v1.1.pdf)
 
 # Appendix B: Machine Readable Short-Form Report Format
 

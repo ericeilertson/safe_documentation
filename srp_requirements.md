@@ -1,4 +1,3 @@
-
 ![alt_text](images/OCP-SAFE-logo-horz-color-3x-v1-2b.png "image_tooltip")
 
 ## SRP Requirements
@@ -51,7 +50,7 @@ OCP Security Workgroup
   </tr>
 </table>
 
-##  
+##   
 
 ## Glossary
 
@@ -75,18 +74,19 @@ Different scope levels will encompass varying device types subject to different 
 narrower requirements and correspond to relatively common device types and review scenarios, while others require
 demonstrating a larger, different set of skills to deliver an assessment.
 
-It will likely be the case that a single SOC may require analysis from multiple scopes, i.e. the security processor may
+It will likely be the case that a single SOC may require analysis from multiple scopes, e.g. the security processor may
 require additional scrutiny than the application cores.
-
 
 ![alt_text](images/growing_scope.png "image_tooltip")
 
 There is a burden of proof on the SRP to demonstrate it meets the guidelines. The OCP will establish a panel for
 assessing applications to become an approved SRP, and this document gives the basis on which the assessment will be
 made. The application should include a response to the business requirements and technical requirements given below. The
-response to the technical requirements should be organized around the assessment scopes.
+response to the technical requirements should be organized around the assessment scopes. A more comprehensive list of
+review areas can be found in the [review areas](review_areas.md) document.
 
 ## Assessment Scope Overview
+
 ![alt_text](images/safe_focus_areas.png "image_tooltip")
 
 ### Scope 1 - Validating Code
@@ -128,12 +128,15 @@ The SRP should be prepared to offer assessment capabilities in the following are
     13. Erasure
     14. Exploit mitigation
 5. Review of build environment
-   1. Review of toolchain integrity: 
-   * Specified compiler, library versions
-   2. Review of toolchain output
-   * Use of protective technology
-   * Debug strings, symbols
-   * Stack canaries, protection
+    1. Review of toolchain integrity:
+
+    * Specified compiler, library versions
+
+    2. Review of toolchain output
+
+    * Use of protective technology
+    * Debug strings, symbols
+    * Stack canaries, protection
 
 ### Scope 2 - Assessing architecture for isolation
 
@@ -170,15 +173,15 @@ secrets, and crypto accelerator blocks.
     1. Demonstrated expertise with current attack techniques and costs in time and equipment
     2. Demonstrated expertise with mitigation techniques
 2. Design evaluation for physical isolation
-    3. Specific evaluation of software coding techniques (time, CFI)
-    4. RTL evaluation (masking, clocking, toolchain capabilities, …)
-    5. Physical design evaluation for isolation, die and PCB
+   1. Specific evaluation of software coding techniques (time, CFI)
+   2. RTL evaluation (masking, clocking, toolchain capabilities, …)
+   3. Physical design evaluation for isolation, die and PCB
 3. Time, Frequency, Voltage, Power, Optical and EM domain side channel analysis facilities
 4. Time, Voltage, Optical and EM domain fault injection facilities
 5. Code flow integrity protections around boot and crypto
-    6. Time constant
-    7. Checking complimentary hw
-    8. Integrity checked OTP fuses
+   1. Time constant
+   2. Checking complimentary hw
+   3. Integrity checked OTP fuses
 6. Crypto accelerators designed to withstand glitching attacks
 
 ## Business Requirements
@@ -408,7 +411,7 @@ questions.
 7. Are files received via email/download scanned when they enter the network?
 8. Are IT systems that host Program Participant information regularly backed up?
 9. Do back-up controls ensure that the availability of Program Participant information can be sustained in line with
-   Program Participant's business requirements.
+   Program Participant's business requirements?
 10. In the case of Program Participant relevant systems and services, do backup arrangements cover all systems
     information, applications and data necessary to recover the complete system?
 11. Are system administrators and operators' activities monitored and logged in a non-modifiable way?
@@ -542,7 +545,7 @@ questions.
    maintained?
 9. Are actions identified to correct non-compliance with policies recorded and acceptable remediation tracked?
 
-##  
+##   
 
 ## Technical Requirements
 
