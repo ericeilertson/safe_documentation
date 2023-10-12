@@ -184,7 +184,7 @@ secrets, and crypto accelerator blocks.
    3. Integrity checked OTP fuses
 6. Crypto accelerators designed to withstand glitching attacks
 
-## Business Requirements
+## Business Requirements and Code of Conduct
 
 The criteria and questions below will be evaluated in totality. A prospective SRP does not need to address everything
 listed below in granular detail. The OCP will assess each CSP application and the responses to each of the following
@@ -298,7 +298,7 @@ questions.
 8. Is security awareness training commensurate with differing levels of responsibilities and access?
 9. Do employees responsible for Information Security undergo additional specific training (e.g., Information Security
    Operations)?
-10. Is a disciplinary process, that would be invoked as a consequence of non-compliance referenced, in all relevant
+10. Is there a disciplinary process, that would be invoked as a consequence of non-compliance referenced, in all relevant
     policies and related training?
 11. Is there a policy/documented process to ensure that HR notify security/access administration of an
     employee's/contractor's termination or change of status for access rights removal?

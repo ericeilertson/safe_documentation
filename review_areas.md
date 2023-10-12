@@ -60,7 +60,7 @@ review.
 3. Services running on DUT
 4. All API's implemented on DUT
 
-###    
+###     
 
 ### Code Review
 
@@ -158,7 +158,7 @@ review.
 
 #### Trusted Execution Environment
 
-1. Generic TEE requirements, need to think about these
+1. DV implemented TEE's must generally conform to standards evolving in the Confidential Computing Consortium.
 2. Trusted execution environment has physical and logical safeguards to provide isolation from other processing entities
 3. IO from the TEE follows industry standards such as IDE or TDISP. If a proprietary protocol is used, e.g. XGMI,
    NVLINK, it must provide similar authentication, integrity, and isolation guarantees
@@ -186,7 +186,7 @@ review.
 1. Encrypted memory or storage uses industry standard crypto e.g., AES-XTS
 2. Encryption keys must be generated to appropriate length and entropy to comply with FIPS/CNSA standards
 3. Encryption keys must not be stored/cache in associated volatile or non-volatile storage
-4. Wrapped keys, typically used for storage or transport, must have a mechanism to detection modification or replay
+4. Wrapped keys, typically used for storage or transport, must have a mechanism to detect modification or replay
 5. Encryption mechanisms are resistant to side channel attacks
 
  

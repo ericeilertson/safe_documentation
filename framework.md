@@ -259,9 +259,8 @@ and any embargo periods end) has concluded:
   mailing list.
 
 * The scope itself can be any number of documents, as long as the concatenation of them is provided to the OCP Security
-  WG. Aside from level of effort estimates, no part of the DV/SRP statement of work, NDAs, etc. needs to be published at
-  all
-
+  WG. Aside from level of effort estimates, no part of the DV/SRP statement of work, NDAs, etc. needs to be published.
+  
 * **Short-Form Report** \
   The SRP must produce a cryptographically signed machine-readable short-form report. This document will summarize the
   audit scope, and uniquely identify the vendor, device and firmware version by means of a firmware hash. This report
